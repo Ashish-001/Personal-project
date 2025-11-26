@@ -65,10 +65,49 @@ let i = 1;
 let size = 50;
 let clicks = 0;
 
-// Initialize love letter on page load
+// Login functionality
+const CORRECT_USERNAME = "shilip";
+const CORRECT_PASSWORD = "i love you";
+
 document.addEventListener('DOMContentLoaded', () => {
-    updateLoveLetter();
+    const loginForm = document.getElementById('login-form');
+    const loginContainer = document.getElementById('login-container');
+    const mainContainer = document.getElementById('main-container');
+    const errorMessage = document.getElementById('error-message');
+
+    // Check if user is already logged in
+    if (sessionStorage.getItem('loggedIn') === 'true') {
+        loginContainer.style.display = 'none';
+        mainContainer.style.display = 'flex';
+        updateLoveLetter();
+        return;
+    }
+
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        if (username === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
+            // Successful login
+            sessionStorage.setItem('loggedIn', 'true');
+            loginContainer.style.display = 'none';
+            mainContainer.style.display = 'flex';
+            errorMessage.textContent = '';
+            updateLoveLetter();
+        } else {
+            // Failed login
+            errorMessage.textContent = 'Invalid username or password. Please try again.';
+            document.getElementById('password').value = '';
+        }
+    });
 });
+
+// Initialize love letter on page load (only if logged in)
+if (sessionStorage.getItem('loggedIn') === 'true') {
+    updateLoveLetter();
+}
 
 no_button.addEventListener('click', () => {
     // Change banner source
