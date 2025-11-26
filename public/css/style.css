@@ -1,0 +1,232 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+#no-button {
+    margin: 0 10px;
+    color: white;
+    background-color: red;
+    height: 40px !important;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+
+    p {
+        margin: 0;
+        object-fit: contain;
+    }
+}
+
+#yes-button {
+    margin: 0 10px;
+    color: white;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+    height: 40px;
+
+    p {
+        margin: 0;
+        object-fit: contain;
+    }
+}
+
+/* Make responsive for mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.message {
+    display: none;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.love-letter {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 40px;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 
+                0 0 0 1px rgba(255, 182, 193, 0.2);
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.love-letter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff69b4, #ffb6c1, #ff69b4);
+    border-radius: 10px 10px 0 0;
+}
+
+.letter-content {
+    color: #333;
+    line-height: 1.8;
+}
+
+.letter-date {
+    text-align: right;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.letter-greeting {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d63384;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.letter-body {
+    text-align: left;
+    font-size: 16px;
+    color: #444;
+    margin: 25px 0;
+}
+
+.letter-body p {
+    margin-bottom: 15px;
+    text-indent: 20px;
+}
+
+.letter-body p:first-child {
+    text-indent: 0;
+}
+
+.letter-signature {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #d63384;
+    font-style: italic;
+    font-weight: bold;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner-gif {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    img {
+        width: auto;
+        height: 250px;
+    }
+}
+
+.language-selector {
+    margin-top: 30px;
+    position: unset;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.language-selector label {
+    margin-right: 10px;
+}
+
+.language-selector select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.creator {
+    text-decoration: none;
+    color: #333;
+}
+
+.creator:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+.creator:hover {
+    text-decoration: underline;
+    color: #555;
+}
+
+/* CSS For Mobile */
+@media (max-width: 768px) {
+    .language-selector {
+        position: unset;
+        margin-top: 30px;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .love-letter {
+        padding: 25px 20px;
+        margin: 20px 10px;
+    }
+
+    .letter-body {
+        font-size: 14px;
+    }
+
+    .letter-greeting {
+        font-size: 18px;
+    }
+
+    .letter-signature {
+        font-size: 16px;
+    }
+}

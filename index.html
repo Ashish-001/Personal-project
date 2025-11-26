@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import Question</title>
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner-gif">
+        <img id="banner" src="./public/images/mid.gif" alt="banner" />
+      </div>
+      <h1 id="question-heading">Will you marry me?</h1>
+      <div class="buttons">
+        <button id="yes-button"><p>Yes</p></button>
+        <button id="no-button"><p>No</p></button>
+      </div>
+      <div class="message">
+        <h2 id="success-message">Yepppie, I love you! :3</h2>
+        
+        <div class="love-letter" id="love-letter">
+          <div class="letter-content">
+            <p class="letter-date" id="letter-date">Today</p>
+            <p class="letter-greeting" id="letter-greeting">My Dearest,</p>
+            <div class="letter-body" id="letter-body">
+              <p>From the moment you said yes, my heart has been overflowing with joy. You are my sunshine, my everything, and I cannot wait to spend the rest of my life with you.</p>
+              <p>Every day with you feels like a dream come true. Your smile lights up my world, your laughter is my favorite sound, and your love is the greatest gift I've ever received.</p>
+              <p>I promise to love you, cherish you, and stand by your side through all of life's adventures. Together, we can conquer anything.</p>
+              <p>Thank you for making me the happiest person in the world. I love you more than words can express.</p>
+            </div>
+            <p class="letter-signature" id="letter-signature">Forever yours,<br>With all my love ❤️</p>
+          </div>
+        </div>
+      </div>
+      <div class="language-selector">
+        <label for="language-select">Choose Language:</label>
+        <select id="language-select" onchange="changeLanguage()">
+          <option value="english">English</option>
+          <option value="french">French</option>
+          <option value="thai">แบบไทย</option>
+        </select>
+      </div>
+    </div>
+    <script src="./public/js/script.js"></script>
+  </body>
+</html>
