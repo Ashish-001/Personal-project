@@ -66,7 +66,7 @@ let size = 50;
 let clicks = 0;
 
 // Login functionality
-const CORRECT_USERNAME = "shilip";
+const CORRECT_USERNAME = "shilpi";
 const CORRECT_PASSWORD = "i love you";
 
 document.addEventListener('DOMContentLoaded', () => {
